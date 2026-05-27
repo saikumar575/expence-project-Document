@@ -46,6 +46,9 @@ Once you got mysql prompt, you can use below command to check schemas/databases 
 ```
 show databases;
 ```
+```
+use transactions;
+```
 
 Once you are in particular schema, you can get the list of tables.
 
@@ -56,5 +59,5 @@ show tables;
 You can get entries of a table using
 
 ```
-select * from <table_name>;
+select * from transactions;
 ```
