@@ -15,7 +15,7 @@ The frontend provides the user interface, the backend processes business logic a
 
 # Architecture
 
-## Three-Tier Architecture
+## 3-Tier Architecture
 
 ```text
 +-------------------+
@@ -45,7 +45,7 @@ The frontend provides the user interface, the backend processes business logic a
 |   Port : 3306     |
 +-------------------+
 ```
-# 3 Tier Architecture
+# 3-Tier Architecture
 
 ![alt text](3-tier-expense.svg)
 
