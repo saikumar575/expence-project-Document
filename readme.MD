@@ -1,9 +1,9 @@
 
-# Expence Application
+# Expense Application
 
 ## Project Overview
 
-Expence is a three-tier web application designed to manage expecse transactions. The application consists of:
+Expense is a three-tier web application designed to manage expense transactions. The application consists of:
 
 * Frontend Layer (Nginx Web Server)
 * Backend Layer (Node.js Application)
@@ -47,7 +47,7 @@ The frontend provides the user interface, the backend processes business logic a
 ```
 # 3-Tier Architecture
 
-![alt text](3-tier-expence.svg)
+![alt text](3-tier-expense.svg)
 
 ---
 
@@ -118,7 +118,7 @@ Starts MySQL service immediately.
 ## Secure MySQL Root User
 
 ```bash
-mysql_secure_installation --set-root-pass ExpenceApp@1
+mysql_secure_installation --set-root-pass ExpenseApp@1
 ```
 
 ### Explanation
@@ -130,7 +130,7 @@ Sets root password and secures MySQL installation.
 ## Verify MySQL Connection
 
 ```bash
-mysql -uroot -pExpenceApp@1
+mysql -uroot -pExpenseApp@1
 ```
 
 Check databases:
@@ -196,7 +196,7 @@ Stores application code in a standard location.
 ## Download Backend Code
 
 ```bash
-curl -o /tmp/backend.zip https://expence-builds.s3.us-east-1.amazonaws.com/expence-backend-v2.zip
+curl -o /tmp/backend.zip https://expence-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
 ```
 
 ```bash
@@ -355,7 +355,7 @@ Deletes default Nginx landing page.
 ## Download Frontend Code
 
 ```bash
-curl -o /tmp/frontend.zip https://expence-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
 ```
 
 ---
@@ -381,7 +381,7 @@ Deploys frontend application files.
 Create configuration file:
 
 ```bash
-vim /etc/nginx/default.d/expence.conf
+vim /etc/nginx/default.d/expense.conf
 ```
 
 Paste:
@@ -425,7 +425,7 @@ http://<FRONTEND-IP>
 
 Expected Result:
 
-* Expence application page loads successfully.
+* Expense application page loads successfully.
 
 ---
 
@@ -444,7 +444,7 @@ systemctl status backend
 Connect:
 
 ```bash
-mysql -uroot -pExpenceApp@1
+mysql -uroot -pExpenseApp@1
 ```
 
 List databases:
@@ -476,7 +476,7 @@ select * from transactions;
 # Project Directory Structure
 
 ```text
-Expence/
+Expense/
 │
 ├── Frontend (Nginx)
 │   └── Static Web Files
@@ -510,7 +510,7 @@ MySQL Database
 
 # Author
 
-Project Name: Expence
+Project Name: Expense
 
 Architecture: 3-Tier Architecture
 
