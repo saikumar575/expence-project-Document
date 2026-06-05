@@ -1,9 +1,9 @@
 
-# Expense Application
+# Expence Application
 
 ## Project Overview
 
-Expense is a three-tier web application designed to manage expense transactions. The application consists of:
+Expence is a three-tier web application designed to manage expecse transactions. The application consists of:
 
 * Frontend Layer (Nginx Web Server)
 * Backend Layer (Node.js Application)
@@ -47,7 +47,7 @@ The frontend provides the user interface, the backend processes business logic a
 ```
 # 3-Tier Architecture
 
-![alt text](3-tier-expense.svg)
+![alt text](3-tier-expence.svg)
 
 ---
 
@@ -118,7 +118,7 @@ Starts MySQL service immediately.
 ## Secure MySQL Root User
 
 ```bash
-mysql_secure_installation --set-root-pass ExpenseApp@1
+mysql_secure_installation --set-root-pass ExpenceApp@1
 ```
 
 ### Explanation
@@ -130,7 +130,7 @@ Sets root password and secures MySQL installation.
 ## Verify MySQL Connection
 
 ```bash
-mysql -uroot -pExpenseApp@1
+mysql -uroot -pExpenceApp@1
 ```
 
 Check databases:
@@ -196,7 +196,7 @@ Stores application code in a standard location.
 ## Download Backend Code
 
 ```bash
-curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
+curl -o /tmp/backend.zip https://expence-builds.s3.us-east-1.amazonaws.com/expence-backend-v2.zip
 ```
 
 ```bash
@@ -241,7 +241,7 @@ Paste:
 Description=Backend Service
 
 [Service]
-User=expense
+User=expence
 Environment=DB_HOST="<MYSQL-SERVER-IP>"
 ExecStart=/bin/node /app/index.js
 SyslogIdentifier=backend
@@ -293,7 +293,7 @@ Required to load schema into MySQL.
 ## Load Database Schema
 
 ```bash
-mysql -h <MYSQL-SERVER-IP> -uroot -pExpenseApp@1 < /app/schema/backend.sql
+mysql -h <MYSQL-SERVER-IP> -uroot -pExpenceApp@1 < /app/schema/backend.sql
 ```
 
 ### Explanation
@@ -355,7 +355,7 @@ Deletes default Nginx landing page.
 ## Download Frontend Code
 
 ```bash
-curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+curl -o /tmp/frontend.zip https://expence-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
 ```
 
 ---
@@ -381,7 +381,7 @@ Deploys frontend application files.
 Create configuration file:
 
 ```bash
-vim /etc/nginx/default.d/expense.conf
+vim /etc/nginx/default.d/expence.conf
 ```
 
 Paste:
@@ -425,7 +425,7 @@ http://<FRONTEND-IP>
 
 Expected Result:
 
-* Expense application page loads successfully.
+* Expence application page loads successfully.
 
 ---
 
@@ -444,7 +444,7 @@ systemctl status backend
 Connect:
 
 ```bash
-mysql -uroot -pExpenseApp@1
+mysql -uroot -pExpenceApp@1
 ```
 
 List databases:
@@ -476,7 +476,7 @@ select * from transactions;
 # Project Directory Structure
 
 ```text
-Expense/
+Expence/
 │
 ├── Frontend (Nginx)
 │   └── Static Web Files
@@ -510,9 +510,9 @@ MySQL Database
 
 # Author
 
-Project Name: Expense
+Project Name: Expence
 
-Architecture: Three-Tier Architecture
+Architecture: 3-Tier Architecture
 
 Technologies:
 
