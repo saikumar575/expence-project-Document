@@ -1,14 +1,16 @@
 
 # Expense Application
 
-Project Description
+# Project Description
+
 The Expense Application is a full-stack web application developed using a 3-Tier Architecture to manage and track expense transactions efficiently. The application is designed with separate frontend, backend, and database layers, ensuring scalability, security, maintainability, and high performance.
 
 The Frontend Layer is hosted on Nginx, which serves static web content and acts as a reverse proxy for API requests. The Backend Layer is built using Node.js, providing RESTful APIs and handling all business logic, data processing, and communication with the database. The Database Layer uses MySQL to securely store expense records and transaction details.
 
 This architecture allows each layer to operate independently, making the application easier to deploy, manage, and scale in production environments. The project demonstrates industry-standard deployment practices on Linux servers using Systemd for service management and Nginx Reverse Proxy for efficient request routing.
 
-Key Highlights
+# Key Highlights
+
 Designed using a scalable 3-Tier Architecture
 
 Nginx-based frontend with reverse proxy configuration
