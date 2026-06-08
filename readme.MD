@@ -549,6 +549,3 @@ Technologies:
 * MySQL
 * Linux
 * Systemd
-
-
-![Project Screenshot](images/exp.png)
